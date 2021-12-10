@@ -53,7 +53,7 @@
           gateway_id: "{{ result_igw.gateway_id }}"
     register: result_route_table
 
-- name: security group
+  - name: security group
   ec2_group:
     name: Public
     description: sg with rule descriptions
