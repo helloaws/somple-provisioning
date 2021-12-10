@@ -53,17 +53,17 @@
           gateway_id: "{{ result_igw.gateway_id }}"
     register: result_route_table
 
-  - name: security group
+- name: security group
   ec2_group:
     name: Public
     description: sg with rule descriptions
     vpc_id: "{{result_vpc.vpc.id}}"
     region: "{{aws_region}}"
     rules:
-      - proto: tcp
-        ports:
-        - 80
-        - 22
-        cidr_ip: 0.0.0.0/0
-        rule_desc: allow all on port 80
+    - proto: tcp
+      ports:
+      - 80
+      - 22
+      cidr_ip: 0.0.0.0/0
+      rule_desc: allow all on port 80
     
