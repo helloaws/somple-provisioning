@@ -1,5 +1,5 @@
 ---
-- name: somple-provisioning-btc34
+- name: somple-provisioning
   hosts: localhost
   connection: local
   gather_facts: false
